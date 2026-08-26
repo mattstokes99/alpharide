@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlphaRide | Autonomous Rides Coming to Alpharetta</title>
+<meta name="description" content="AlphaRide is an independent mobility company preparing to bring Tesla Cybercabs to Alpharetta, Georgia. Join the waitlist to be first in line at launch.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span>
+      <span>
+        <span class="logo-text">AlphaRide</span>
+        <span class="logo-sub">Coming to Alpharetta</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Join the Waitlist</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="disclaimer-strip">
+  <div class="container">
+    <p>AlphaRide is an independent company and is not affiliated with, endorsed by, or sponsored by Tesla, Inc. "Cybercab" refers to Tesla's vehicle platform.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="eyebrow">Coming Soon to Alpharetta, GA</span>
+        <h1>Your Next Ride Is <span class="grad-text">Coming.</span></h1>
+        <p class="lead">AlphaRide is an independent mobility company preparing to bring a fleet of Tesla Cybercabs to Alpharetta — autonomous, on-demand rides across the city's biggest destinations. No driver. No steering wheel. Just tap and go.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Join the Waitlist</a>
+          <a href="locations.html" class="btn btn-secondary">See Where We're Headed</a>
+        </div>
+        <p class="hero-note">Launch depends on Tesla's own Cybercab production and availability timeline. We'll notify waitlist members the moment AlphaRide is ready to ride.</p>
+      </div>
+
+      <div class="vehicle-scene">
+        <svg viewBox="0 0 800 350" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="lightBar" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffe9b8"/>
+              <stop offset="55%" stop-color="#ffb020"/>
+              <stop offset="100%" stop-color="#ff8a00"/>
+            </linearGradient>
+            <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffb020" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#ffb020" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="9"/>
+            </filter>
+          </defs>
+
+          <!-- ambient distant lights -->
+          <g fill="#ffd68a" opacity="0.5">
+            <circle cx="90" cy="150" r="2"/>
+            <circle cx="140" cy="175" r="1.5"/>
+            <circle cx="700" cy="160" r="2"/>
+            <circle cx="660" cy="185" r="1.4"/>
+            <circle cx="60" cy="200" r="1.6"/>
+          </g>
+
+          <!-- road -->
+          <path d="M330,225 L470,225 L800,350 L0,350 Z" fill="#17161a"/>
+          <path d="M330,225 L470,225 L800,350 L0,350 Z" fill="#000000" opacity="0.15"/>
+
+          <!-- reflection / ground glow -->
+          <ellipse cx="400" cy="300" rx="230" ry="16" fill="url(#glowGrad)" filter="url(#softBlur)"/>
+
+          <!-- vehicle silhouette -->
+          <g>
+            <circle cx="248" cy="294" r="17" fill="#0c0c0e" stroke="#2a2924" stroke-width="2"/>
+            <circle cx="560" cy="294" r="17" fill="#0c0c0e" stroke="#2a2924" stroke-width="2"/>
+
+            <path d="M178,292
+                     C183,264 210,246 252,239
+                     C304,231 356,227 408,227
+                     C462,227 512,232 556,242
+                     C588,249 608,260 618,273
+                     L624,288
+                     C624,292 619,294 611,294
+                     L186,294
+                     C180,294 177,293 178,292 Z"
+                  fill="#131217" stroke="#2a2924" stroke-width="1.5"/>
+
+            <path d="M230,246 C300,224 470,222 552,240" fill="none" stroke="#7dd8ff" stroke-opacity="0.35" stroke-width="1.5"/>
+
+            <rect class="vs-glow" x="556" y="266" width="62" height="9" rx="4.5" fill="url(#lightBar)"/>
+            <rect x="556" y="266" width="62" height="9" rx="4.5" fill="url(#lightBar)" filter="url(#softBlur)" opacity="0.8"/>
+          </g>
+        </svg>
+        <div class="vs-caption">AlphaRide — Concept Illustration<small>Not an actual Cybercab photo</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap stats -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Passenger Cybercab, as unveiled by Tesla</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">~$30K</div>
+          <div class="stat-label">Tesla's targeted starting price</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Electric, zero tailpipe emissions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Independent operator, planning Alpharetta's launch</div>
+        </div>
+      </div>
+      <p class="stats-note">Vehicle figures reflect Tesla's own public statements about the Cybercab platform. AlphaRide is not affiliated with Tesla, Inc. and cannot guarantee specifications, pricing, or availability.</p>
+    </div>
+  </section>
+
+  <!-- Why Cybercab -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Why Cybercab</span>
+        <h2>A New Way to Move Around Alpharetta</h2>
+        <p>Tesla's Cybercab is purpose-built for autonomous ride-hailing — and AlphaRide is preparing to be the fleet operator that brings it here.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="icon">01</div>
+          <h3>Fully Autonomous</h3>
+          <p>Designed from the ground up for self-driving — Tesla has shown Cybercab prototypes with no steering wheel or pedals.</p>
+        </div>
+        <div class="card">
+          <div class="icon">02</div>
+          <h3>Built for Rides</h3>
+          <p>A two-seat layout designed specifically for short, efficient point-to-point trips rather than long family road trips.</p>
+        </div>
+        <div class="card">
+          <div class="icon">03</div>
+          <h3>Electric &amp; Quiet</h3>
+          <p>Fully electric with inductive charging shown at Tesla's unveiling — no tailpipe, no gas station stops.</p>
+        </div>
+        <div class="card">
+          <div class="icon">04</div>
+          <h3>On-Demand</h3>
+          <p>Tap a button, get picked up — the same app-based model Tesla has described for its Robotaxi network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="section-bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">The Road to Launch</span>
+        <h2>Where We Are Right Now</h2>
+        <p>Cybercab launch timing is set by Tesla, not by AlphaRide. Here's how we're using the time before launch.</p>
+      </div>
+      <div class="roadmap-steps">
+        <div class="roadmap-step is-current">
+          <div class="step-number">1</div>
+          <h4>Waitlist &amp; Planning</h4>
+          <p>Building our Alpharetta waitlist and mapping planned pickup zones.</p>
+          <span class="step-status">In Progress</span>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-number">2</div>
+          <h4>Cybercab Production</h4>
+          <p>Tesla ramps Cybercab manufacturing toward wider availability.</p>
+          <span class="step-status">Set by Tesla</span>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-number">3</div>
+          <h4>Fleet Acquisition</h4>
+          <p>AlphaRide acquires its first Cybercabs once available to fleet operators.</p>
+          <span class="step-status">Pending</span>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-number">4</div>
+          <h4>Alpharetta Launch</h4>
+          <p>Rides go live across our planned Alpharetta service area.</p>
+          <span class="step-status">Pending</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations teaser -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Planned Service Area</span>
+        <h2>Where AlphaRide Is Headed</h2>
+        <p>From Avalon to downtown Alpharetta — and the developments still under construction.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Avalon</h3>
+          <p>Alpharetta's flagship mixed-use destination — shopping, dining, and entertainment envisioned as a core pickup hub.</p>
+          <span class="pill">Live Now</span>
+        </div>
+        <div class="card">
+          <h3>Downtown Alpharetta</h3>
+          <p>City Center, Around Lunch dining district, and the civic core of the city.</p>
+          <span class="pill">Live Now</span>
+        </div>
+        <div class="card">
+          <h3>The Gathering</h3>
+          <p>A new Napa Valley-style retail district on Haynes Bridge Road, expected to open in late 2026.</p>
+          <span class="pill ice">Coming Soon</span>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="locations.html" class="btn btn-secondary">View All Planned Locations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Be First in Line When We Launch</h2>
+      <p>Join the AlphaRide waitlist and we'll notify you the moment rides go live in Alpharetta.</p>
+      <a href="contact.html" class="btn btn-primary">Join the Waitlist</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">AlphaRide</span>
+        </a>
+        <p>An independent mobility company preparing to bring Tesla Cybercabs to Alpharetta, Georgia.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="locations.html">Avalon</a></li>
+          <li><a href="locations.html">Downtown Alpharetta</a></li>
+          <li><a href="locations.html">Halcyon</a></li>
+          <li><a href="locations.html">The Gathering</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@ridealpha.com">hello@ridealpha.com</a></li>
+          <li>Alpharetta, GA</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">AlphaRide is an independent, pre-launch mobility company and is not affiliated with, endorsed by, sponsored by, or in partnership with Tesla, Inc. "Tesla" and "Cybercab" are trademarks of Tesla, Inc., used here only to describe the vehicle platform AlphaRide plans to operate once it is commercially available to fleet operators. All vehicle imagery on this site is an original illustration, not a Tesla photograph. Timelines, pricing, and availability are estimates and are not guaranteed.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 AlphaRide. All rights reserved.</span>
+      <span>Pre-launch concept site — service is not yet operating.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

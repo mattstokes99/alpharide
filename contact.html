@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join the Waitlist | AlphaRide</title>
+<meta name="description" content="Join the AlphaRide waitlist to be first in line when autonomous Cybercab rides launch in Alpharetta, Georgia.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span>
+      <span>
+        <span class="logo-text">AlphaRide</span>
+        <span class="logo-sub">Coming to Alpharetta</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Join the Waitlist</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="disclaimer-strip">
+  <div class="container">
+    <p>AlphaRide is an independent company and is not affiliated with, endorsed by, or sponsored by Tesla, Inc. "Cybercab" refers to Tesla's vehicle platform.</p>
+  </div>
+</div>
+
+<main>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <span class="eyebrow">Join the Waitlist</span>
+      <h1>Be First in Line When We Launch</h1>
+      <p>Tell us a bit about yourself and where you'd want to ride, and we'll reach out the moment AlphaRide is ready.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container contact-layout">
+
+      <!-- Form -->
+      <div>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="zip">Home or Work ZIP Code</label>
+              <input type="text" id="zip" name="zip" autocomplete="postal-code" placeholder="30004, 30005, 30009...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>I'm most interested as a: <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="role" value="Future Rider" required> Future Rider</label>
+              <label class="radio-option"><input type="radio" name="role" value="Local Business"> Local Business / Property</label>
+              <label class="radio-option"><input type="radio" name="role" value="Media"> Media / Press</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Where Would You Want to Ride Most?</label>
+            <select id="location" name="location">
+              <option value="">Select a location</option>
+              <option value="Avalon">Avalon</option>
+              <option value="Downtown Alpharetta">Downtown Alpharetta</option>
+              <option value="Halcyon">Halcyon</option>
+              <option value="North Point">North Point</option>
+              <option value="Ameris Bank Amphitheatre">Ameris Bank Amphitheatre</option>
+              <option value="Northwinds Tech Corridor">Northwinds Tech Corridor</option>
+              <option value="Other">Somewhere else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Anything Else We Should Know?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Commute route, event you're planning around, questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Join the Waitlist</button>
+          <p class="form-note">We'll only email you about AlphaRide's Alpharetta launch — no spam. Replace this form's action URL with your Formspree (or similar) endpoint to start receiving submissions by email.</p>
+
+          <div class="form-status"></div>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <div class="contact-info-card">
+          <h3>Contact Details</h3>
+          <div class="info-row">
+            <span class="icon">✉</span>
+            <div>Email<br><a href="mailto:hello@ridealpha.com">hello@ridealpha.com</a></div>
+          </div>
+          <div class="info-row">
+            <span class="icon">📍</span>
+            <div>Based in<br>Alpharetta, GA</div>
+          </div>
+          <div>
+            <div class="info-row" style="margin-bottom:8px;">
+              <span class="icon">🚗</span>
+              <div>Planned Coverage</div>
+            </div>
+            <ul class="service-area-list">
+              <li>Avalon</li>
+              <li>Downtown Alpharetta</li>
+              <li>Halcyon</li>
+              <li>North Point</li>
+              <li>Northwinds</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-side-card">
+          <h4>Not Live Yet</h4>
+          <p>AlphaRide is a pre-launch concept — there's no ride to book today. Joining the waitlist just gets you notified the moment that changes.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">AlphaRide</span>
+        </a>
+        <p>An independent mobility company preparing to bring Tesla Cybercabs to Alpharetta, Georgia.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="locations.html">Avalon</a></li>
+          <li><a href="locations.html">Downtown Alpharetta</a></li>
+          <li><a href="locations.html">Halcyon</a></li>
+          <li><a href="locations.html">The Gathering</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@ridealpha.com">hello@ridealpha.com</a></li>
+          <li>Alpharetta, GA</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">AlphaRide is an independent, pre-launch mobility company and is not affiliated with, endorsed by, sponsored by, or in partnership with Tesla, Inc. "Tesla" and "Cybercab" are trademarks of Tesla, Inc., used here only to describe the vehicle platform AlphaRide plans to operate once it is commercially available to fleet operators. All vehicle imagery on this site is an original illustration, not a Tesla photograph. Timelines, pricing, and availability are estimates and are not guaranteed.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 AlphaRide. All rights reserved.</span>
+      <span>Pre-launch concept site — service is not yet operating.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
