@@ -1,25 +1,9 @@
-// AlphaRide — shared site behavior
+// AlphaRide — shared site behavior ("The Route" layout)
 
 document.addEventListener("DOMContentLoaded", function () {
-  /* Mobile nav toggle */
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.querySelector(".main-nav");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  /* Locations filter */
+  /* Locations filter (works whether cards sit in a grid or filmstrip) */
   var filterBar = document.querySelector(".filter-bar");
   if (filterBar) {
     var filterButtons = filterBar.querySelectorAll(".filter-btn");
@@ -27,9 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     filterButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        filterButtons.forEach(function (b) {
-          b.classList.remove("active");
-        });
+        filterButtons.forEach(function (b) { b.classList.remove("active"); });
         btn.classList.add("active");
 
         var filter = btn.getAttribute("data-filter");
@@ -45,9 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Scroll reveal — subtle fade/slide-in for section content as it enters view */
+  /* Filmstrip prev/next controls */
+  var filmstrip = document.querySelector(".location-filmstrip");
+  var prevBtn = document.querySelector(".filmstrip-prev");
+  var nextBtn = document.querySelector(".filmstrip-next");
+
+  if (filmstrip && prevBtn && nextBtn) {
+    var scrollStep = function () {
+      var card = filmstrip.querySelector(".location-card");
+      return card ? card.getBoundingClientRect().width + 20 : 320;
+    };
+
+    prevBtn.addEventListener("click", function () {
+      filmstrip.scrollBy({ left: -scrollStep(), behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", function () {
+      filmstrip.scrollBy({ left: scrollStep(), behavior: "smooth" });
+    });
+  }
+
+  /* Scroll reveal — fade/slide-in for section content as it enters view.
+     Route-timeline stops use the same "is-visible" class to trigger their
+     connecting line segment drawing in (handled purely in CSS). */
   var revealTargets = document.querySelectorAll(
-    ".card, .location-card, .section-header, .value-item, .roadmap-step, .vehicle-scene, .stat-panel, .about-split > *, .stats-grid .stat"
+    ".card, .location-card, .section-header, .value-item, .route-stop, .editorial-point, .about-photo, .stat-panel, .about-split > *, .stats-grid .stat"
   );
 
   if ("IntersectionObserver" in window && revealTargets.length) {
@@ -69,6 +73,48 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(el);
     });
   }
+
+  /* Scroll progress — fills the vertical indicator built into the nav rail */
+  var progressFill = document.querySelector(".rail-progress-fill");
+  var heroEl = document.querySelector(".hero-split");
+  var heroCopy = document.querySelector(".hero-copy-col");
+  var ticking = false;
+
+  function onScroll() {
+    var scrollY = window.scrollY;
+
+    if (progressFill) {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      progressFill.style.height = pct + "%";
+    }
+
+    if (!prefersReducedMotion) {
+      document.body.style.setProperty("--parallax", scrollY);
+
+      if (heroEl && heroCopy) {
+        var heroHeight = heroEl.offsetHeight || 1;
+        var progress = Math.min(Math.max(scrollY / heroHeight, 0), 1);
+        heroCopy.style.transform = "translateY(" + progress * 24 + "px)";
+        heroCopy.style.opacity = String(1 - progress * 0.6);
+      }
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  onScroll();
 
   /* Waitlist form — client-side handling.
      Replace the form's "action" attribute with your Formspree (or other
